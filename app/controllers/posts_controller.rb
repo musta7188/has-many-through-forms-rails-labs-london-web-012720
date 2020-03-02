@@ -5,10 +5,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    
   end
 
   def new
     @post = Post.new
+    # @post.categories.build(name: "create category")? question about this moved in the form
   end
 
   def create
